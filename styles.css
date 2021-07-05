@@ -3,12 +3,132 @@ html, body, #app {
   height: 100%;
   width: 100%;
   margin: 0;
+  background-color: lightblue;
 }
+
+h1 {
+  color: white;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 4;
+
+}
+
+
 
 /* Continue building out the CSS styling for your Twiddler app below! We got you started by
 providing a space for you to apply styles to your app's outermost HTML element - the #app itself. */
 
 #app {
-  background-color: green;
-  color: yellow;
+  color: black;
+  font-family: 'Bona Nova', serif;
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-columns: 28fr 55fr 39fr;
+  grid-template-rows: 150px auto;
+}
+
+.icon {
+  color: #000;
+}
+
+.icon .comment:hover {
+  color: #2fe7ff;
+}
+
+.icon .retweet:hover {
+  color: #2fe7ff;
+}
+
+.icon .like:hover {
+  color:#2fe7ff;
+}
+
+.icon .share:hover {
+  color:#2fe7ff;
+}
+
+#feed {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+#feed > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+
+#divButton > button {
+  background-color: #f1f1f1;
+  border: none;
+  margin: 10px;
+  padding: 20px;
+  font-size: 78%;
+  font-family: 'Bona Nova', serif;
+  font-size: 20px;
+  width: 100%;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.tweet {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-gap: 8px 15px;
+}
+
+.tweet:hover {
+  cursor: pointer;
+}
+
+.tweet > img {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.tweet > .icon {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+
+.tweet > .usernameAndTimestamp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+}
+
+.tweet > .message {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.tweet > .usernameAndTimestamp {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+.username:hover {
+  text-decoration: underline;
+}
+
+.timestamp:hover {
+  text-decoration: underline;
+}
+
+.timestamp {
+  font-size: 13px;
 }
